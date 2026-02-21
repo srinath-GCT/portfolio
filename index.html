@@ -1,0 +1,1937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srinath A | Chip Architect & Embedded Systems Engineer</title>
+    <meta name="description" content="Electrical Engineering undergraduate at GCT Coimbatore, aspiring Chip Architect with expertise in VLSI, Embedded Systems, and Aerospace. Leading innovative projects in railway safety, healthcare AI, and sustainable technology.">
+    <meta name="keywords" content="Srinath A, Chip Architect, VLSI, Embedded Systems, Electrical Engineering, GCT, IoT, AI, Aerospace, Southern Railways, Healthcare AI">
+    <meta name="author" content="Srinath A">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/srinath-GCT">
+    <meta property="og:title" content="Srinath A | Chip Architect & Embedded Systems Engineer">
+    <meta property="og:description" content="Electrical Engineering undergraduate at GCT Coimbatore, aspiring Chip Architect with expertise in VLSI, Embedded Systems, and Aerospace.">
+    <meta property="og:image" content="https://github.com/srinath-GCT.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://github.com/srinath-GCT">
+    <meta property="twitter:title" content="Srinath A | Chip Architect & Embedded Systems Engineer">
+    <meta property="twitter:description" content="Electrical Engineering undergraduate at GCT Coimbatore, aspiring Chip Architect with expertise in VLSI, Embedded Systems, and Aerospace.">
+    <meta property="twitter:image" content="https://github.com/srinath-GCT.png">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a1512;
+            --secondary: #231e1a;
+            --accent: #e07b39;
+            --accent-glow: rgba(224, 123, 57, 0.3);
+            --text-primary: #ffffff;
+            --text-secondary: #b8a89a;
+            --border: rgba(255, 255, 255, 0.1);
+            --gradient-1: linear-gradient(135deg, #e07b39 0%, #d4a574 100%);
+            --gradient-2: linear-gradient(135deg, #8b6f4e 0%, #d4a574 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 15, 0.9);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+        }
+
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 20% 50%, rgba(0, 212, 170, 0.15) 0%, transparent 50%),
+                        radial-gradient(ellipse at 80% 20%, rgba(0, 168, 232, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+
+        .hero-text p.tagline {
+            font-size: 1.25rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+
+        .hero-text .bio {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 32px;
+            max-width: 500px;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-positions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .position-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(224, 123, 57, 0.15);
+            border: 1px solid rgba(224, 123, 57, 0.3);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .position-badge i {
+            color: var(--accent);
+            font-size: 0.85rem;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: var(--gradient-1);
+            color: var(--primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px var(--accent-glow);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .profile-container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+        }
+
+        .profile-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 350px;
+            height: 350px;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.4;
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.4; transform: translate(-50%, -50%) scale(1); }
+            50% { opacity: 0.6; transform: translate(-50%, -50%) scale(1.1); }
+        }
+
+        .profile-image {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            z-index: 2;
+        }
+
+        .profile-ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 340px;
+            height: 340px;
+            border: 2px dashed var(--accent);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        /* Section Styles */
+        section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .section-header h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section-tag {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(224, 123, 57, 0.1);
+            color: var(--accent);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .skill-card {
+            background: var(--secondary);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 0.3s;
+        }
+
+        .skill-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+        }
+
+        .skill-icon {
+            width: 56px;
+            height: 56px;
+            background: rgba(224, 123, 57, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .skill-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+        }
+
+        .skill-list li {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 32px;
+        }
+
+        .project-card {
+            background: var(--secondary);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .project-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-header {
+            padding: 32px 32px 0;
+        }
+
+        .project-status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .status-ongoing {
+            background: rgba(0, 212, 170, 0.15);
+            color: var(--accent);
+        }
+
+        .status-completed {
+            background: rgba(102, 126, 234, 0.15);
+            color: #667eea;
+        }
+
+        .status-research {
+            background: rgba(255, 193, 7, 0.15);
+            color: #ffc107;
+        }
+
+        .project-header h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .project-desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .project-footer {
+            padding: 24px 32px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .project-tag {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .btn-view {
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-view:hover {
+            background: var(--accent);
+            color: var(--primary);
+        }
+
+        /* Research Section */
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .research-card {
+            background: var(--secondary);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+            transition: all 0.3s;
+        }
+
+        .research-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+        }
+
+        .research-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .research-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+        }
+
+        .research-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 16px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            border-top: 1px solid var(--border);
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand {
+            max-width: 300px;
+        }
+
+        .footer-brand .logo {
+            margin-bottom: 12px;
+        }
+
+        .footer-brand p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .social-links a {
+            width: 44px;
+            height: 44px;
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--secondary);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            width: 100%;
+            max-width: 900px;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: 40px;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .modal-header h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .modal-close:hover {
+            color: var(--accent);
+        }
+
+        /* Certifications & Awards Sections */
+        .certifications-grid, .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .cert-card, .award-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            transition: all 0.3s;
+        }
+
+        .cert-card:hover, .award-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+        }
+
+        .cert-icon, .award-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(224, 123, 57, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            color: var(--accent);
+            margin-bottom: 16px;
+        }
+
+        .cert-title, .award-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .cert-issuer, .award-org {
+            color: var(--accent);
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+        }
+
+        .cert-date, .award-date {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            margin-top: 48px;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--text-primary);
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            background: var(--accent-glow);
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 60px;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 3px;
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.3s;
+        }
+
+        .theme-toggle-slider {
+            width: 24px;
+            height: 24px;
+            background: var(--accent);
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+
+        .theme-toggle.light .theme-toggle-slider {
+            transform: translateX(30px);
+        }
+
+        /* Light Theme */
+        body.light-theme {
+            --primary: #f8f9fa;
+            --secondary: #ffffff;
+            --accent: #e07b39;
+            --text-primary: #212529;
+            --text-secondary: #6c757d;
+            --border: rgba(0, 0, 0, 0.1);
+        }
+
+        /* Mobile Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 40px;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .profile-container {
+                width: 300px;
+                height: 300px;
+            }
+
+            .profile-glow {
+                width: 250px;
+                height: 250px;
+            }
+
+            .profile-image {
+                width: 200px;
+                height: 200px;
+            }
+
+            .profile-ring {
+                width: 240px;
+                height: 240px;
+            }
+
+            .hero-stats {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .research-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .certifications-grid,
+            .awards-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .theme-toggle {
+                top: 15px;
+                right: 15px;
+            }
+
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+            }
+
+            .contact-form {
+                padding: 24px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .hero-text p {
+                font-size: 0.95rem;
+            }
+
+            .position-badge {
+                font-size: 0.8rem;
+                padding: 6px 12px;
+            }
+
+            .project-card,
+            .research-card,
+            .cert-card,
+            .award-card {
+                padding: 20px;
+            }
+
+            .modal-content {
+                padding: 24px;
+                margin: 20px;
+            }
+
+            .form-group input,
+            .form-group textarea {
+                padding: 10px 14px;
+            }
+        }
+
+        .modal-body {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .modal-body h4 {
+            color: var(--text-primary);
+            margin: 24px 0 12px;
+            font-size: 1.1rem;
+        }
+
+        .modal-body ul {
+            margin-left: 20px;
+            margin-bottom: 16px;
+        }
+
+        .modal-body li {
+            margin-bottom: 8px;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text .bio {
+                max-width: 100%;
+            }
+
+            .hero-stats {
+                justify-content: center;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .profile-container {
+                width: 280px;
+                height: 280px;
+            }
+
+            .profile-image {
+                width: 220px;
+                height: 220px;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Srinath A</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#ongoing">Ongoing</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Chip Architect in the Making</h1>
+                    <p class="tagline">Aspiring VLSI Designer & Embedded Systems Engineer</p>
+                    <p class="bio">Electrical and Electronics Engineering undergraduate at Government College of Technology, Coimbatore (2023-27). CGPA 8.45 in EEE with Minor in VLSI at ECE (CGPA 8.00). Passionate about chip design, embedded systems, and aerospace research. Leading multidisciplinary projects at the intersection of hardware and innovation.</p>
+                    
+                    <div class="hero-positions">
+                        <span class="position-badge"><i class="fas fa-user-tie"></i> Class Representative – EEE</span>
+                        <span class="position-badge"><i class="fas fa-briefcase"></i> Placement Representative – EEE</span>
+                        <span class="position-badge"><i class="fas fa-rocket"></i> Cosmoz Team Head – CAS Club GCT</span>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-value">8.45</div>
+                            <div class="stat-label">CGPA</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">4</div>
+                            <div class="stat-label">Projects</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">5</div>
+                            <div class="stat-label">Researches</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">500+</div>
+                            <div class="stat-label">LinkedIn</div>
+                        </div>
+                    </div>
+
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-rocket"></i> View My Work
+                        </a>
+                        <a href="https://github.com/srinath-GCT" target="_blank" class="btn btn-secondary">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-image">
+                    <div class="profile-container">
+                        <div class="profile-glow"></div>
+                        <div class="profile-ring"></div>
+                        <img src="profile.jpeg" alt="Srinath A" class="profile-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Expertise</span>
+                <h2>Technical Skills</h2>
+                <p>Core competencies in embedded systems, VLSI design, and hardware engineering</p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Embedded Systems</h3>
+                    <ul class="skill-list">
+                        <li>ESP32</li>
+                        <li>Raspberry Pi Pico</li>
+                        <li>Arduino</li>
+                        <li>MicroPython</li>
+                        <li>C/C++</li>
+                        <li>Circuit Design</li>
+                        <li>PCB Design</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-memory"></i>
+                    </div>
+                    <h3>VLSI & Chip Design</h3>
+                    <ul class="skill-list">
+                        <li>Verilog</li>
+                        <li>System Verilog</li>
+                        <li>FPGA Design</li>
+                        <li>Digital IC Design</li>
+                        <li>Low Power Design</li>
+                        <li>Chip Testing & Verification</li>
+                        <li>Signal Processing (Filters)</li>
+                        <li>Quartus Prime</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-satellite"></i>
+                    </div>
+                    <h3>Aerospace Systems</h3>
+                    <ul class="skill-list">
+                        <li>Ionosphere Behavior Analysis</li>
+                        <li>Mars Mission Planning</li>
+                        <li>Rover & Lander Design</li>
+                        <li>GMAT Simulation</li>
+                        <li>Trajectory Planning</li>
+                        <li>Entry Descent Landing</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>IoT & Communication</h3>
+                    <ul class="skill-list">
+                        <li>LoRa / LoRaWAN</li>
+                        <li>Communication Protocols</li>
+                        <li>Mesh Networks</li>
+                        <li>Sensor Integration</li>
+                        <li>Edge AI</li>
+                        <li>Wireless Systems</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Design & Tools</h3>
+                    <ul class="skill-list">
+                        <li>TINA-TI</li>
+                        <li>MATLAB</li>
+                        <li>KiCad</li>
+                        <li>Keil uVision</li>
+                        <li>Quartus Prime</li>
+                        <li>Embest IDE</li>
+                        <li>Project Management Tools</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Credentials</span>
+                <h2>Certifications</h2>
+                <p>Professional certifications validating technical expertise and industry knowledge</p>
+            </div>
+            
+            <div class="certifications-grid">
+                <div class="cert-card fade-in">
+                    <div class="cert-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3 class="cert-title">Digital IC Design</h3>
+                    <p class="cert-issuer">NPTEL - IIT Bombay</p>
+                    <p class="cert-date">May 2025</p>
+                </div>
+
+                <div class="cert-card fade-in">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="cert-title">ADPP Certification</h3>
+                    <p class="cert-issuer">LAMDA Tech Softics</p>
+                    <p class="cert-date">August 2023</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards" style="background: var(--secondary);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Achievements</span>
+                <h2>Awards & Recognition</h2>
+                <p>Academic excellence and competition achievements</p>
+            </div>
+            
+            <div class="awards-grid">
+                <div class="award-card fade-in">
+                    <div class="award-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="award-title">Smart India Hackathon 2023</h3>
+                    <p class="award-org">3rd Place Winner</p>
+                    <p class="award-date">AgriGuard AI - Wildlife Detection System</p>
+                </div>
+
+                <div class="award-card fade-in">
+                    <div class="award-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="award-title">Academic Excellence</h3>
+                    <p class="award-org">12th Standard - 96%</p>
+                    <p class="award-date">Outstanding Academic Performance</p>
+                </div>
+
+                <div class="award-card fade-in">
+                    <div class="award-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="award-title">A+ Grade</h3>
+                    <p class="award-org">Government College of Technology</p>
+                    <p class="award-date">Consistent Academic Excellence</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ongoing Projects Section -->
+    <section id="ongoing" style="background: var(--secondary);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">In Progress</span>
+                <h2>Ongoing Projects</h2>
+                <p>Currently advancing cutting-edge solutions in railway safety, healthcare AI, and aerospace</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-status status-ongoing">Ongoing</span>
+                        <h3>Impetuous Braking Detection</h3>
+                        <p class="project-desc">Status monitoring system for AC coach fire detection system with cloud integration.</p>
+                    </div>
+                    <div class="project-footer">
+                        <div class="project-tags">
+                            <span class="project-tag">Railway Safety</span>
+                            <span class="project-tag">IoT</span>
+                            <span class="project-tag">ML</span>
+                        </div>
+                        <button class="btn-view" onclick="openModal('railway')">
+                            <i class="fas fa-clock"></i> Uploading Soon
+                        </button>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-status status-ongoing">Ongoing</span>
+                        <h3>Katran – AI Clinical Triage Assistant</h3>
+                        <p class="project-desc">Smart AI assistant for nurse to reduce burden of training nurse and increase time management for single patient.</p>
+                    </div>
+                    <div class="project-footer">
+                        <div class="project-tags">
+                            <span class="project-tag">Healthcare AI</span>
+                            <span class="project-tag">NLP</span>
+                            <span class="project-tag">Agentic AI</span>
+                        </div>
+                        <button class="btn-view" onclick="openModal('katran')">
+                            <i class="fas fa-clock"></i> Uploading Soon
+                        </button>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-status status-ongoing">Ongoing</span>
+                        <h3>Mission Gravitas</h3>
+                        <p class="project-desc">Mars rover mission with GMAT trajectory planning, autonomous navigation, and sustainable exploration systems for interplanetary missions.</p>
+                    </div>
+                    <div class="project-footer">
+                        <div class="project-tags">
+                            <span class="project-tag">Aerospace</span>
+                            <span class="project-tag">GMAT</span>
+                            <span class="project-tag">Autonomy</span>
+                        </div>
+                        <button class="btn-view" onclick="openModal('gravitas')">
+                            <i class="fas fa-expand"></i> View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Completed Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Completed</span>
+                <h2>Finished Projects</h2>
+                <p>Successfully delivered solutions in sustainable agriculture and renewable energy</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <span class="project-status status-completed">Completed</span>
+                        <h3>Solar Tracking & Automatic Irrigation</h3>
+                        <p class="project-desc">Smart agriculture system with solar tracking panels and soil moisture-based automated irrigation for sustainable farming.</p>
+                    </div>
+                    <div class="project-footer">
+                        <div class="project-tags">
+                            <span class="project-tag">ESP32</span>
+                            <span class="project-tag">Solar</span>
+                            <span class="project-tag">IoT</span>
+                        </div>
+                        <button class="btn-view" onclick="openModal('solar')">
+                            <i class="fas fa-expand"></i> View Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" style="background: var(--secondary);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Research</span>
+                <h2>Research Work</h2>
+                <p>Exploring innovative solutions in disaster management, power systems, and wildlife conservation</p>
+            </div>
+            
+            <div class="research-grid">
+                <div class="research-card">
+                    <h3>GNSS–Ionosphere Based Tsunami Early Warning System</h3>
+                    <p>Low-cost tsunami detection using ionospheric TEC variations from GNSS signals for 10-15 minute early warnings along Indian coastlines.</p>
+                    <div class="research-meta">
+                        <span class="project-status status-research">Research</span>
+                        <button class="btn-view" onclick="openModal('tsunami')">
+                            <i class="fas fa-expand"></i> Details
+                        </button>
+                    </div>
+                </div>
+
+                <div class="research-card">
+                    <h3>Smart Power Management for Micro-Grids</h3>
+                    <p>Dynamic load prioritization algorithm for solar micro-grids ensuring uninterrupted critical load power while extending battery life by 40%.</p>
+                    <div class="research-meta">
+                        <span class="project-status status-research">Research</span>
+                        <button class="btn-view" onclick="openModal('power')">
+                            <i class="fas fa-expand"></i> Details
+                        </button>
+                    </div>
+                </div>
+
+                <div class="research-card">
+                    <h3>CMRG – Mesh Network using LoRa</h3>
+                    <p>Self-organizing mesh networks with AI and blockchain for resilient communication in agriculture, railways, and disaster response systems.</p>
+                    <div class="research-meta">
+                        <span class="project-status status-research">Research</span>
+                        <button class="btn-view" onclick="openModal('cmrg')">
+                            <i class="fas fa-expand"></i> Details
+                        </button>
+                    </div>
+                </div>
+
+                <div class="research-card">
+                    <h3>Prognostic Guardian – EV Battery Safety</h3>
+                    <p>Hardware-centric EV battery monitoring using multi-sensor fusion to predict thermal runaway and failures before occurrence.</p>
+                    <div class="research-meta">
+                        <span class="project-status status-research">Research</span>
+                        <button class="btn-view" onclick="openModal('prognostic')">
+                            <i class="fas fa-expand"></i> Details
+                        </button>
+                    </div>
+                </div>
+
+                <div class="research-card">
+                    <h3>AgriGuard AI – Wildlife Detection</h3>
+                    <p>AI-powered elephant detection system using geophones and edge AI with non-harmful deterrents for crop protection. SIH 3rd place.</p>
+                    <div class="research-meta">
+                        <span class="project-status status-research">SIH Finalist</span>
+                        <button class="btn-view" onclick="openModal('agriguard')">
+                            <i class="fas fa-expand"></i> Details
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/Footer Section -->
+    <footer id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <h2>Contact Me</h2>
+                <p>Let's collaborate on innovative projects and discuss opportunities</p>
+            </div>
+            
+            <div class="contact-form fade-in">
+                <form onsubmit="handleSubmit(event)">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+            
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">Srinath A</div>
+                    <p>Electrical Engineering Undergraduate | Aspiring Chip Architect<br>Virudhunagar, Tamil Nadu, India</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/srinath-GCT" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/srinath-a-6b31932a2" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:asriganesh2020@gmail.com" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="tel:+917845860047" title="Phone">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Srinath A. All rights reserved. | Built with passion for innovation</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" onclick="toggleTheme()">
+        <div class="theme-toggle-slider"></div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Modal for Reports -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Project Report</h3>
+                <button class="modal-close" onclick="closeModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Content will be loaded dynamically -->
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-secondary" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Modal functionality
+        function openModal(project) {
+            const modal = document.getElementById('modal');
+            const title = document.getElementById('modal-title');
+            const body = document.getElementById('modal-body');
+            const download = document.getElementById('modal-download');
+            
+            const projectData = {
+                railway: {
+                    title: 'Impetuous Braking Detection – Southern Railways',
+                    content: `
+                        <div style="text-align: center; padding: 40px 20px;">
+                            <i class="fas fa-clock" style="font-size: 3rem; color: var(--accent); margin-bottom: 20px;"></i>
+                            <h4 style="color: var(--text-primary); margin-bottom: 16px;">Project Details Uploading Soon</h4>
+                            <p style="color: var(--text-secondary);">Detailed documentation and technical specifications for this railway safety project are currently being compiled. Check back soon for complete project insights.</p>
+                        </div>
+                    `
+                },
+                katran: {
+                    title: 'Katran – AI Clinical Triage Assistant',
+                    content: `
+                        <div style="text-align: center; padding: 40px 20px;">
+                            <i class="fas fa-clock" style="font-size: 3rem; color: var(--accent); margin-bottom: 20px;"></i>
+                            <h4 style="color: var(--text-primary); margin-bottom: 16px;">Project Details Uploading Soon</h4>
+                            <p style="color: var(--text-secondary);">Detailed documentation and technical specifications for this healthcare AI project are currently being compiled. Check back soon for complete project insights.</p>
+                        </div>
+                    `
+                },
+                gravitas: {
+                    title: 'Mission Gravitas – Mars Rover Mission',
+                    content: `
+                        <h4>What It Is</h4>
+                        <p>A comprehensive Mars rover mission project featuring interplanetary trajectory planning, autonomous navigation systems, and sustainable surface exploration technologies for long-duration missions.</p>
+                        
+                        <h4>The Mission Architecture</h4>
+                        <ul>
+                            <li><strong>Trajectory Planning:</strong> Hohmann transfer orbit calculations using NASA GMAT software for optimal Earth-to-Mars transfer</li>
+                            <li><strong>Direct Entry:</strong> Atmospheric braking and powered descent system for surface landing</li>
+                            <li><strong>Lander-Rover Integration:</strong> Coordinated systems for delivery, shelter, and base operations</li>
+                            <li><strong>Autonomous Operations:</strong> Self-driving capabilities with hazard avoidance and return-to-base functionality</li>
+                        </ul>
+                        
+                        <h4>Rover Design & Autonomy</h4>
+                        <ul>
+                            <li>Solar power management with sun-seeking behavior</li>
+                            <li>Context-aware decision making for resource conservation</li>
+                            <li>IR homing beacon for emergency return to lander</li>
+                            <li>Obstacle negotiation and terrain mapping</li>
+                            <li>Sample collection and storage systems</li>
+                        </ul>
+                        
+                        <h4>Technical Implementation</h4>
+                        <ul>
+                            <li>GMAT simulation for mission validation</li>
+                            <li>Embedded C++ for rover control systems</li>
+                            <li>Wi-Fi telemetry for surface communication</li>
+                            <li>Multi-sensor fusion for navigation</li>
+                        </ul>
+                        
+                        <h4>Inspiration</h4>
+                        <p>Modeled after NASA's Opportunity rover which survived 14+ years on Mars, proving that resilient design and intelligent power management can far exceed planned mission lifetimes.</p>
+                    `
+                },
+                solar: {
+                    title: 'Solar Tracking & Automatic Irrigation',
+                    content: `
+                        <h4>What It Is</h4>
+                        <p>An intelligent agricultural system that combines solar energy harvesting with automated irrigation to optimize both power generation and water usage for sustainable farming.</p>
+                        
+                        <h4>The Problem</h4>
+                        <p>Rural agriculture faces challenges with water scarcity and unreliable electricity. Fixed solar panels don't maximize energy capture, and manual irrigation leads to water wastage.</p>
+                        
+                        <h4>Our Solution</h4>
+                        <ul>
+                            <li><strong>Single-Axis Solar Tracking:</strong> LDR-based servo system continuously aligns panels with sun position for maximum energy harvest</li>
+                            <li><strong>Moisture-Based Irrigation:</strong> Soil sensors trigger automated watering only when needed, preventing over-irrigation</li>
+                            <li><strong>Solar-Powered Operation:</strong> Entire system runs on renewable energy, eliminating grid dependency</li>
+                            <li><strong>Smart Control:</strong> ESP32 microcontroller coordinates tracking and irrigation decisions</li>
+                        </ul>
+                        
+                        <h4>Technical Implementation</h4>
+                        <ul>
+                            <li>ESP32 with dual-core processing</li>
+                            <li>Servo motors for panel positioning</li>
+                            <li>Analog soil moisture sensors</li>
+                            <li>BTS7960 motor driver for pump control</li>
+                            <li>Battery storage with charge management</li>
+                        </ul>
+                        
+                        <h4>Impact</h4>
+                        <p>Reduces water consumption by 40% and increases solar energy capture by 30% compared to static systems, providing a sustainable solution for rural agriculture.</p>
+                    `
+                },
+                tsunami: {
+                    title: 'GNSS–Ionosphere Tsunami Early Warning System',
+                    content: `
+                        <h4>What It Is</h4>
+                        <p>A low-cost ground-based monitoring system that detects tsunami-generated disturbances in the ionosphere using GNSS signals, providing 10-15 minute early warnings before ocean waves reach coastlines.</p>
+                        
+                        <h4>The Problem</h4>
+                        <p>Current DART buoy systems cost ₹10 crore each and detect tsunamis only after wave formation. Near-field tsunamis (like those threatening Andaman Islands) arrive too quickly for these systems to provide adequate warning time.</p>
+                        
+                        <h4>Scientific Principle</h4>
+                        <ul>
+                            <li>Undersea earthquakes generate tsunamis</li>
+                            <li>Tsunami energy creates acoustic-gravity waves that travel upward</li>
+                            <li>These waves reach the ionosphere in 8-10 minutes</li>
+                            <li>Cause measurable Total Electron Content (TEC) variations</li>
+                            <li>GNSS signals passing through ionosphere are affected</li>
+                            <li>Analysis of signal delays provides early detection</li>
+                        </ul>
+                        
+                        <h4>Our Implementation</h4>
+                        <ul>
+                            <li><strong>Hardware:</strong> Raspberry Pi Pico + NEO-6M GNSS module</li>
+                            <li><strong>Cost:</strong> Under ₹2,000 per station</li>
+                            <li><strong>Network:</strong> Scalable pilot network of 10 stations costs ₹5 lakhs</li>
+                            <li><strong>Detection Logic:</strong> Differentiates TEC patterns from solar flares, electrojets, and tsunamis</li>
+                        </ul>
+                        
+                        <h4>Advantage Over DART</h4>
+                        <p>5000x cheaper than DART buoys while providing 10-15 minute earlier warnings by detecting atmospheric disturbances before ocean waves form.</p>
+                    `
+                },
+                power: {
+                    title: 'Smart Power Management for Micro-Grids',
+                    content: `
+                        <h4>What It Is</h4>
+                        <p>An intelligent load management system for solar-powered micro-grids that dynamically prioritizes electrical loads based on real-time power availability, ensuring critical systems never lose power.</p>
+                        
+                        <h4>The Problem</h4>
+                        <p>Solar micro-grids often experience power deficits during low-sunlight conditions, leading to complete blackouts. Uncontrolled load shedding affects critical services like medical equipment and emergency lighting.</p>
+                        
+                        <h4>Dynamic Load Prioritization</h4>
+                        <ul>
+                            <li><strong>Critical Loads:</strong> Medical equipment, emergency lighting (always powered)</li>
+                            <li><strong>Essential Loads:</strong> Fans, basic lighting, water pumps (shed only if battery critical)</li>
+                            <li><strong>Non-Essential Loads:</strong> Heaters, air conditioners (first to shed on deficit)</li>
+                        </ul>
+                        
+                        <h4>Algorithm Operation</h4>
+                        <ul>
+                            <li>Continuously monitors solar generation and battery State of Charge</li>
+                            <li>When power deficit detected → automatically disconnect non-essential loads</li>
+                            <li>When battery reaches critical level → shed essential loads</li>
+                            <li>Always maintains power to critical loads regardless of conditions</li>
+                            <li>Restores loads automatically when power availability improves</li>
+                        </ul>
+                        
+                        <h4>Technical Implementation</h4>
+                        <ul>
+                            <li>Voltage and current sensors for power monitoring</li>
+                            <li>Rule-based algorithm for fast decision-making</li>
+                            <li>Relay modules for load switching</li>
+                            <li>Low-cost microcontroller implementation</li>
+                        </ul>
+                        
+                        <h4>Results</h4>
+                        <p>Achieves ~40% battery life extension through optimized discharge cycles while ensuring zero interruptions to critical medical and safety equipment.</p>
+                    `
+                },
+                cmrg: {
+                    title: 'CMRG – Mesh Network using LoRa',
+                    content: `
+                        <h4>What It Is</h4>
+                        <p>A self-organizing, fault-resilient mesh network platform combining LoRaWAN communication, AI-driven management, and blockchain security for multiple domain applications including agriculture, railways, and disaster response.</p>
+                        
+                        <h4>The Problem</h4>
+                        <p>Traditional centralized networks have single points of failure and cannot adapt to dynamic environments. Rural areas, moving vehicles, and disaster zones need resilient, self-healing communication infrastructure.</p>
+                        
+                        <h4>Key Innovations</h4>
+                        <ul>
+                            <li><strong>Self-Healing Topology:</strong> Network automatically reroutes when nodes fail or move</li>
+                            <li><strong>AI-Driven Routing:</strong> Dynamic path optimization based on congestion and signal quality</li>
+                            <li><strong>Blockchain Security:</strong> Tamper-proof data logging and automated smart contracts</li>
+                            <li><strong>Federated Learning:</strong> Distributed AI training across nodes without centralizing data</li>
+                            <li><strong>Edge Computing:</strong> Local processing reduces latency and bandwidth needs</li>
+                        </ul>
+                        
+                        <h4>Domain Applications</h4>
+                        <ul>
+                            <li><strong>Smart Agriculture:</strong> Crop monitoring and irrigation control in remote areas</li>
+                            <li><strong>Railway Safety:</strong> Real-time coach monitoring and passenger safety systems</li>
+                            <li><strong>Disaster Response:</strong> Rapidly deployable communication after infrastructure failure</li>
+                            <li><strong>Smart Cities:</strong> Traffic management and environmental monitoring</li>
+                        </ul>
+                        
+                        <h4>Technology Stack</h4>
+                        <ul>
+                            <li>LoRa/LoRaWAN for long-range communication</li>
+                            <li>ESP32-based mesh nodes</li>
+                            <li>AI for network optimization and anomaly detection</li>
+                            <li>Lightweight blockchain for security</li>
+                        </ul>
+                        
+                        <h4>SDG Alignment</h4>
+                        <p>Contributes to SDG 8 (Economic Growth), SDG 9 (Infrastructure), SDG 11 (Smart Cities), and SDG 13 (Climate Action) through resilient, sustainable connectivity solutions.</p>
+                    `
+                },
+                prognostic: {
+                    title: 'Prognostic Guardian – EV Battery Safety',
+                    content: `
+                        <h4>What It Is</h4>
+                        <p>A hardware-centric battery monitoring system for electric vehicles that predicts thermal runaway and battery failures before they occur, using multi-sensor data fusion and trend analysis.</p>
+                        
+                        <h4>The Problem</h4>
+                        <p>83 electric vehicles caught fire in Karnataka alone (2020-2024). Current BMS systems only show basic charge levels, not actual battery health. Thermal runaway often occurs without warning, leading to catastrophic fires.</p>
+                        
+                        <h4>Prognostic Approach</h4>
+                        <p>Unlike reactive fire suppression systems, Prognostic Guardian <strong>predicts failures before they happen</strong> by monitoring degradation indicators:</p>
+                        <ul>
+                            <li><strong>Internal Resistance Tracking:</strong> DC pulse method measures battery health aging</li>
+                            <li><strong>Cell Imbalance Detection:</strong> Continuous voltage comparison identifies weak cells</li>
+                            <li><strong>Thermal Trend Analysis:</strong> Temperature patterns reveal dangerous heating before critical levels</li>
+                            <li><strong>Gas Detection:</strong> MQ sensors detect electrolyte vapor - earliest sign of internal damage</li>
+                        </ul>
+                        
+                        <h4>Safety Features</h4>
+                        <ul>
+                            <li><strong>Safety Score (0-100):</strong> Easy-to-understand battery health metric</li>
+                            <li><strong>Predictive Maintenance Alerts:</strong> Warns weeks before potential failure</li>
+                            <li><strong>Emergency Disconnect:</strong> Automatic battery isolation on critical conditions</li>
+                            <li><strong>Service Notifications:</strong> Instant alerts to driver and service centers</li>
+                        </ul>
+                        
+                        <h4>Technical Implementation</h4>
+                        <ul>
+                            <li>NTC thermistors for distributed temperature monitoring</li>
+                            <li>Hall effect sensors for non-invasive current measurement</li>
+                            <li>Voltage divider networks for cell-level monitoring</li>
+                            <li>MQ-series gas sensors for electrolyte detection</li>
+                            <li>MOSFET contactors for fast emergency disconnect</li>
+                        </ul>
+                        
+                        <h4>Cost & Feasibility</h4>
+                        <p>Prototype cost under ₹5,000 using locally available components. Mass production target ₹1,500-2,000 per unit - significantly cheaper than a single fire incident.</p>
+                    `
+                },
+                agriguard: {
+                    title: 'AgriGuard AI – Wildlife Detection & Deterrence',
+                    content: `
+                        <h4>What It Is</h4>
+                        <p>An AI-powered smart fence system that detects elephants approaching farmland using ground vibration sensors, and deploys non-harmful deterrents to protect crops. Won 3rd place in Smart India Hackathon (SIH).</p>
+                        
+                        <h4>The Problem</h4>
+                        <p>Human-elephant conflicts near forest borders cause ₹50,000-₹1,00,000 annual crop losses per farm. Traditional electric fences harm both animals and farmers. Manual night patrols are dangerous and ineffective.</p>
+                        
+                        <h4>Detection System</h4>
+                        <ul>
+                            <li><strong>Geophone Sensors:</strong> Detect ground vibrations from elephant footsteps (50-100m detection range)</li>
+                            <li><strong>Edge AI Processing:</strong> Raspberry Pi 4 runs Edge Impulse CNN model for real-time classification</li>
+                            <li><strong>FFT Analysis:</strong> Converts vibration signals to frequency domain for pattern recognition</li>
+                            <li><strong>Accuracy:</strong> 90% elephant detection with <2 second response time</li>
+                            <li><strong>Species-Specific:</strong> Distinguishes elephants from other animals to reduce false alarms</li>
+                        </ul>
+                        
+                        <h4>Deterrent Mechanisms</h4>
+                        <ul>
+                            <li><strong>Tier 1 (Immediate):</strong> 80-90 dB bee swarm sounds + 5Hz strobe lights
+                                <br><em>Elephants naturally avoid bees - proven 80% effective in Oxford studies</em></li>
+                            <li><strong>Tier 2 (If needed):</strong> Capsaicin-based chilli smoke
+                                <br><em>Non-toxic deterrent with 70% efficacy in African/Indian farms</em></li>
+                        </ul>
+                        
+                        <h4>Alert System</h4>
+                        <ul>
+                            <li>GSM module sends SMS alerts to farmers within 10 seconds</li>
+                            <li>Message example: "WARNING! Elephant detected at North field - Stage 1 activated"</li>
+                            <li>Works without internet connection</li>
+                        </ul>
+                        
+                        <h4>Technical Specs & Cost</h4>
+                        <ul>
+                            <li>Raspberry Pi 4, geophones (3x), GSM SIM900 module</li>
+                            <li>72+ hours battery backup with solar option</li>
+                            <li>Total cost: ₹16,150 per acre (vs ₹15,000 electric fence)</li>
+                            <li>5+ year lifespan, no maintenance guards needed</li>
+                        </ul>
+                        
+                        <h4>Impact</h4>
+                        <p>80% reduction in crop damage potential, eliminates need for dangerous night patrols, and provides humane wildlife management that protects both farmers and elephants.</p>
+                    `
+                }
+            };
+            
+            const data = projectData[project];
+            title.textContent = data.title;
+            body.innerHTML = data.content;
+            
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Theme Toggle
+        function toggleTheme() {
+            const body = document.body;
+            const themeToggle = document.querySelector('.theme-toggle');
+            
+            body.classList.toggle('light-theme');
+            themeToggle.classList.toggle('light');
+            
+            // Save preference to localStorage
+            localStorage.setItem('theme', body.classList.contains('light-theme') ? 'light' : 'dark');
+        }
+
+        // Load saved theme
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'light') {
+                document.body.classList.add('light-theme');
+                document.querySelector('.theme-toggle').classList.add('light');
+            }
+            
+            // Initialize scroll animations
+            initScrollAnimations();
+        });
+
+        // Scroll Animations
+        function initScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all fade-in elements
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Back to Top Button
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Show/hide back to top button based on scroll
+        window.addEventListener('scroll', function() {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // Contact Form Handler
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                subject: formData.get('subject'),
+                message: formData.get('message')
+            };
+            
+            // Create mailto link
+            const mailtoLink = `mailto:asriganesh2020@gmail.com?subject=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(`Name: ${data.name}\nEmail: ${data.email}\n\n${data.message}`)}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Reset form
+            event.target.reset();
+            
+            // Show success message (optional)
+            alert('Thank you for your message! Your email client has been opened to send the message.');
+        }
+
+        // Close modal on outside click
+        document.getElementById('modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+        
+        // Close modal on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
