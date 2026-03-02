@@ -334,7 +334,109 @@
             margin-bottom: 16px;
         }
 
-        /* Skills Section */
+        /* Experience Section */
+        .experience-grid {
+            display: grid;
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .experience-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 32px;
+            transition: all 0.3s;
+        }
+
+        .experience-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+        }
+
+        .experience-header {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        .experience-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 16px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .company-logo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .experience-info h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+        }
+
+        .company {
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .duration {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .experience-content p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .experience-list {
+            list-style: none;
+            margin-bottom: 24px;
+        }
+
+        .experience-list li {
+            color: var(--text-secondary);
+            padding: 8px 0;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .experience-list li::before {
+            content: "•";
+            color: var(--accent);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .experience-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .exp-img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: transform 0.3s;
+        }
+
+        .exp-img:hover {
+            transform: scale(1.05);
+        }
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -354,17 +456,31 @@
             transform: translateY(-4px);
         }
 
+        .skill-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
         .skill-icon {
-            width: 56px;
-            height: 56px;
+            width: 48px;
+            height: 48px;
             background: rgba(224, 123, 57, 0.1);
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color: var(--accent);
-            margin-bottom: 20px;
+            flex-shrink: 0;
+        }
+
+        .skill-header h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 0;
         }
 
         .skill-card h3 {
@@ -652,7 +768,7 @@
         /* Certifications & Awards Sections */
         .certifications-grid, .awards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 24px;
             margin-top: 48px;
         }
@@ -670,6 +786,13 @@
             transform: translateY(-4px);
         }
 
+        .cert-header, .award-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
         .cert-icon, .award-icon {
             width: 48px;
             height: 48px;
@@ -680,25 +803,47 @@
             justify-content: center;
             font-size: 1.3rem;
             color: var(--accent);
-            margin-bottom: 16px;
+            flex-shrink: 0;
+        }
+
+        .cert-info, .award-info {
+            flex: 1;
         }
 
         .cert-title, .award-title {
             font-size: 1.1rem;
             font-weight: 600;
             color: var(--text-primary);
-            margin-bottom: 8px;
+            margin-bottom: 4px;
         }
 
         .cert-issuer, .award-org {
             color: var(--accent);
             font-size: 0.9rem;
-            margin-bottom: 4px;
+            margin-bottom: 2px;
         }
 
         .cert-date, .award-date {
             color: var(--text-secondary);
             font-size: 0.85rem;
+        }
+
+        .cert-image {
+            margin-top: 16px;
+            text-align: center;
+        }
+
+        .cert-img {
+            max-width: 100%;
+            height: auto;
+            max-height: 200px;
+            border-radius: 8px;
+            object-fit: contain;
+            transition: transform 0.3s;
+        }
+
+        .cert-img:hover {
+            transform: scale(1.02);
         }
 
         /* Contact Form */
@@ -1099,6 +1244,48 @@
         </div>
     </section>
 
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Professional Journey</span>
+                <h2>Experience</h2>
+                <p>Industrial training and professional development in electrical engineering</p>
+            </div>
+            
+            <div class="experience-grid">
+                <div class="experience-card fade-in">
+                    <div class="experience-header">
+                        <div class="experience-logo">
+                            <img src="NLC_intern/1767985852292.jpg" alt="NLC India Limited" class="company-logo">
+                        </div>
+                        <div class="experience-info">
+                            <h3>Electrical Engineering Intern</h3>
+                            <p class="company">NLC India Limited</p>
+                            <p class="duration">July 7-19, 2025 | Neyveli</p>
+                        </div>
+                    </div>
+                    <div class="experience-content">
+                        <p>Trained at Central Electrical Repair Shop (CERS) gaining hands-on experience in electrical machine servicing and industrial maintenance procedures.</p>
+                        <ul class="experience-list">
+                            <li>Insulation Resistance Testing</li>
+                            <li>DC Resistance (DCR) Testing</li>
+                            <li>High Voltage Testing</li>
+                            <li>Transformer Oil Filtration</li>
+                            <li>Breakdown Voltage (BDV) Testing</li>
+                            <li>Protection Systems Understanding</li>
+                        </ul>
+                        <div class="experience-images">
+                            <img src="NLC_intern/1767985852456.jpg" alt="NLC Training" class="exp-img">
+                            <img src="NLC_intern/1767985853897.jpg" alt="NLC Workshop" class="exp-img">
+                            <img src="NLC_intern/WhatsApp Image 2026-03-02 at 11.04.53 PM.jpeg" alt="NLC Team" class="exp-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Skills Section -->
     <section id="skills">
         <div class="container">
@@ -1149,8 +1336,8 @@
                     <h3>Aerospace Systems</h3>
                     <ul class="skill-list">
                         <li>Ionosphere Behavior Analysis</li>
-                        <li>Mars Mission Planning</li>
-                        <li>Rover & Lander Design</li>
+                        <li>Mars Mission Mission Plans</li>
+                        <li>Rover & Lander Working and Making</li>
                         <li>GMAT Simulation</li>
                         <li>Trajectory Planning</li>
                         <li>Entry Descent Landing</li>
@@ -1176,15 +1363,17 @@
                     <div class="skill-icon">
                         <i class="fas fa-tools"></i>
                     </div>
-                    <h3>Design & Tools</h3>
+                    <h3>Software & Tools</h3>
                     <ul class="skill-list">
-                        <li>TINA-TI</li>
+                        <li>TINA</li>
                         <li>MATLAB</li>
                         <li>KiCad</li>
                         <li>Keil uVision</li>
                         <li>Quartus Prime</li>
                         <li>Embest IDE</li>
-                        <li>Project Management Tools</li>
+                        <li>VS Code (C, MicroPython)</li>
+                        <li>MS Excel</li>
+                        <li>MS Word</li>
                     </ul>
                 </div>
             </div>
@@ -1202,21 +1391,35 @@
             
             <div class="certifications-grid">
                 <div class="cert-card fade-in">
-                    <div class="cert-icon">
-                        <i class="fas fa-microchip"></i>
+                    <div class="cert-header">
+                        <div class="cert-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-title">Digital IC Design</h3>
+                            <p class="cert-issuer">NPTEL - IIT Bombay</p>
+                            <p class="cert-date">May 2025</p>
+                        </div>
                     </div>
-                    <h3 class="cert-title">Digital IC Design</h3>
-                    <p class="cert-issuer">NPTEL - IIT Bombay</p>
-                    <p class="cert-date">May 2025</p>
+                    <div class="cert-image">
+                        <img src="Digital_IC_design/WhatsApp Image 2026-03-02 at 11.12.07 PM.jpeg" alt="Digital IC Design Certificate" class="cert-img">
+                    </div>
                 </div>
 
                 <div class="cert-card fade-in">
-                    <div class="cert-icon">
-                        <i class="fas fa-certificate"></i>
+                    <div class="cert-header">
+                        <div class="cert-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="cert-info">
+                            <h3 class="cert-title">ADPP Certification</h3>
+                            <p class="cert-issuer">LAMDA Tech Softics</p>
+                            <p class="cert-date">August 2023</p>
+                        </div>
                     </div>
-                    <h3 class="cert-title">ADPP Certification</h3>
-                    <p class="cert-issuer">LAMDA Tech Softics</p>
-                    <p class="cert-date">August 2023</p>
+                    <div class="cert-image">
+                        <img src="ADPP_certification/WhatsApp Image 2026-03-02 at 11.04.55 PM.jpeg" alt="ADPP Certificate" class="cert-img">
+                    </div>
                 </div>
             </div>
         </div>
